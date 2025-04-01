@@ -157,6 +157,22 @@ export default function Home() {
         )}
       </div>
 
+      <footer className="w-full bg-gray-100 py-6 mt-8">
+        <div className="max-w-4xl mx-auto px-4 text-center text-gray-600 text-xs sm:text-sm">
+          <div className="space-y-1">
+            <p>상호: 파라파라</p>
+            <p>사업자등록번호: 434-02-02767</p>
+            <p>성명: 이광필</p>
+            <p>전화번호: 010-2629-5165</p>
+            <p>개인정보관리책임자: 이광필</p>
+            <p>통신판매업신고번호: 2022-서울강서-3112</p>
+            <p>
+              사업장소재지: 서울특별시 마포구 월드컵북로 179, 2층 2042호(성산동)
+            </p>
+          </div>
+        </div>
+      </footer>
+
       <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-xs">
         <a
           href="http://pf.kakao.com/_CzJGn/chat"
