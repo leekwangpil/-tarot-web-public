@@ -20,6 +20,7 @@ export default function Home() {
   const handleSubmit = async () => {
     // 로컬스토리지 체크
     const lastUsed = localStorage.getItem('lastTarotReading');
+    const usageCount = parseInt(localStorage.getItem('dailyUsageCount') || '0');
     const now = new Date().toISOString();
 
     if (lastUsed) {
@@ -27,10 +28,15 @@ export default function Home() {
       const today = new Date().toDateString();
 
       if (lastDate === today) {
-        alert(
-          '무료 타로 리딩은 하루에 1회만 가능합니다.\n내일 다시 시도해주세요.'
-        );
-        return;
+        if (usageCount >= 80) {
+          alert(
+            '무료 타로 리딩은 하루에 80회까지만 가능합니다.\n내일 다시 시도해주세요.'
+          );
+          return;
+        }
+      } else {
+        // 날짜가 바뀌었으면 카운터 초기화
+        localStorage.setItem('dailyUsageCount', '0');
       }
     }
 
@@ -61,6 +67,7 @@ export default function Home() {
 
       setReading(data.reading);
       localStorage.setItem('lastTarotReading', now);
+      localStorage.setItem('dailyUsageCount', (usageCount + 1).toString());
     } catch (error) {
       console.error('Error:', error);
       setError(
