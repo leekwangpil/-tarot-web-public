@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { tarotImages, TarotCard } from './lib/tarotImages';
 import ReactMarkdown from 'react-markdown';
@@ -16,6 +16,18 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [selectedCards, setSelectedCards] = useState<TarotCard[]>([]);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    // 카카오 애드핏 스크립트 로드
+    const script = document.createElement('script');
+    script.src = '//t1.daumcdn.net/kas/static/ba.min.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const handleSubmit = async () => {
     // 로컬스토리지 체크
@@ -108,6 +120,13 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full">
+              <ins
+                className="kakao_ad_area"
+                style={{ display: 'none' }}
+                data-ad-unit="DAN-sGdYHrRLHYCos75O"
+                data-ad-width="320"
+                data-ad-height="50"
+              />
               <button
                 onClick={handleSubmit}
                 disabled={loading || !question.trim()}
