@@ -168,8 +168,8 @@ export default function Home() {
         </a>
       </div>
 
-      <footer className="w-full bg-gray-100 py-6 mt-8 mb-20">
-        <div className="max-w-4xl mx-auto px-4 text-center text-gray-600 text-xs sm:text-sm">
+      <footer className="w-full py-6 mt-8 mb-20">
+        <div className="max-w-4xl mx-auto px-4 text-center text-white/80 text-xs sm:text-sm">
           <div className="space-y-1">
             <p>상호: 파라파라</p>
             <p>사업자등록번호: 434-02-02767</p>
