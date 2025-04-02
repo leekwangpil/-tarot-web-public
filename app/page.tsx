@@ -102,25 +102,30 @@ export default function Home() {
         <p className="text-center text-lg text-gray-600 mb-8">
           지금 당신을 향한 감정의 흐름을 타로 카드로 들여다보세요.
         </p>
+        <ins
+          className="adsbygoogle"
+          style={{ display: 'block' }}
+          data-ad-client="ca-pub-4743147827699752"
+          data-ad-slot="9808159520"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+        <Script
+          id="adsbygoogle-init"
+          dangerouslySetInnerHTML={{
+            __html: `(adsbygoogle = window.adsbygoogle || []).push({});`,
+          }}
+        />
 
         <div className="mt-8 sm:mt-12">
           <div className="flex flex-col gap-4">
             <div className="w-full">
               <ins
-                className="adsbygoogle"
-                style={{ display: 'block' }}
-                data-ad-client="ca-pub-4743147827699752"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"
-                data-full-width-responsive="true"
-              />
-              <Script
-                id="adsbygoogle-init"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                  `,
-                }}
+                className="kakao_ad_area"
+                style={{ display: 'none' }}
+                data-ad-unit="DAN-sGdYHrRLHYCos75O"
+                data-ad-width="320"
+                data-ad-height="50"
               />
               <label
                 htmlFor="question"
@@ -140,13 +145,6 @@ export default function Home() {
               </div>
             </div>
             <div className="w-full">
-              <ins
-                className="kakao_ad_area"
-                style={{ display: 'none' }}
-                data-ad-unit="DAN-sGdYHrRLHYCos75O"
-                data-ad-width="320"
-                data-ad-height="50"
-              />
               <button
                 onClick={handleSubmit}
                 disabled={loading || !question.trim()}
