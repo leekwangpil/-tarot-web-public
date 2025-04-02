@@ -99,7 +99,7 @@ export default function Home() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-8">
           ✨ 러브시그널 타로 리딩 ✨
         </h1>
-        <p className="text-center text-lg text-gray-600 mb-8">
+        <p className="text-center text-lg text-white mb-8">
           지금 당신을 향한 감정의 흐름을 타로 카드로 들여다보세요.
         </p>
         <ins
