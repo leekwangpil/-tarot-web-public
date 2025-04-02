@@ -5,6 +5,9 @@ import Script from 'next/script';
 export const metadata: Metadata = {
   title: '타로 리딩',
   description: 'AI 타로 리딩 서비스',
+  other: {
+    'google-adsense-account': 'ca-pub-4743147827699752',
+  },
 };
 
 export default function RootLayout({
@@ -19,6 +22,7 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4743147827699752"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
       </head>
       <body>{children}</body>
