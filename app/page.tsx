@@ -194,17 +194,6 @@ export default function Home() {
         )}
       </div>
 
-      <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-[90%] max-w-xs">
-        <a
-          href="http://pf.kakao.com/_CzJGn/chat"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-center text-base sm:text-lg shadow-lg"
-        >
-          👉 1:1 프리미엄 타로 상담 받기
-        </a>
-      </div>
-
       <footer className="w-full py-6 mt-8 mb-20">
         <div className="max-w-4xl mx-auto px-4 text-center text-white/80 text-xs sm:text-sm">
           <div className="space-y-1">
