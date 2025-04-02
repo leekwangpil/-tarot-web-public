@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { tarotImages, TarotCard } from './lib/tarotImages';
 import ReactMarkdown from 'react-markdown';
+import Script from 'next/script';
 
 function getRandomCards(): TarotCard[] {
   const shuffled = [...tarotImages].sort(() => 0.5 - Math.random());
@@ -102,6 +103,22 @@ export default function Home() {
         <div className="mt-8 sm:mt-12">
           <div className="flex flex-col gap-4">
             <div className="w-full">
+              <ins
+                className="adsbygoogle"
+                style={{ display: 'block' }}
+                data-ad-client="ca-pub-4743147827699752"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              />
+              <Script
+                id="adsbygoogle-init"
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                  `,
+                }}
+              />
               <label
                 htmlFor="question"
                 className="block text-sm sm:text-base font-medium text-gray-700 mb-2"
